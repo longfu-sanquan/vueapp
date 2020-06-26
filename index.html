@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的聊天室</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 400px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #myName {
+            margin-top: 20px;
+            width: 150px;
+            height: 30px;
+        }
+
+        #tureBtn {
+            width: 70px;
+            height: 30px;
+        }
+
+        #box2 {
+            width: 600px;
+            height: 800px;
+            border: 1px solid #000;
+            margin: auto;
+        }
+
+
+        #box3 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        #header {
+            height: 40px;
+            line-height: 40px;
+            background-color: brown;
+            display: flex;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        #main {
+            flex: 1;
+            height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 55px;
+            background-color: darkgoldenrod;
+        }
+
+        #inputtext {
+            width: 400px;
+            height: 40px;
+
+        }
+
+        #sendBtn {
+            width: 100px;
+            height: 40px;
+        }
+
+        #tips {
+            height: 25px;
+            width: 150px;
+            background-color: #565166;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 10px;
+            margin: 5px auto;
+        }
+
+        #mynews {
+            height: 70px;
+            width: 500px;
+            margin: 5px auto;
+        }
+
+        #mynews div {
+            width: auto;
+            height: auto;
+            padding: 0 5px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: darkorchid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            float: right;
+        }
+
+        #mynews div p {
+            height: 20px;
+            margin: 4px 0;
+
+        }
+
+        #allnews {
+            height: 70px;
+            width: 500px;
+            margin: 5px auto;
+        }
+
+        #allnews div {
+            width: auto;
+            height: auto;
+            padding: 0 5px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: brown;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            float: left;
+        }
+
+        #allnews div p {
+            height: 20px;
+            width: auto;
+            margin: 4px 0;
+        }
+    </style>
+    <div id="box1">
+        <h1>确认名字：</h1>
+        <select id="myName">
+            <option>赵龙</option>
+            <option>龙建宾</option>
+            <option>邓茂</option>
+            <option>许安翔</option>
+            <option>伊海峰</option>
+        </select>
+        <button id="tureBtn">确认</button>
+    </div>
+    <div id="box2">
+        <div id="box3">
+            <div id="header">
+                在线聊天室
+            </div>
+            <div id="main">
+
+            </div>
+            <div id="footer">
+                <input type="text" id="inputtext"><button id="sendBtn">发送</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./javascripts/jquery.min.js"></script>
+    <script src="./javascripts/socket.io.js"></script>
+    <script src="./javascripts/index.js"></script>
+</body>
+
+</html>
