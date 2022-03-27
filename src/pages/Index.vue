@@ -101,6 +101,7 @@ export default {
     };
   },
   methods: {
+    // 我龙哥回来了
     jump(i){
       this.nowindex = i
     },
